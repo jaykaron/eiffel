@@ -416,7 +416,7 @@ feature -- operations
 			create result.make_from_decimal (l_decimal)
 		end
 
-	divided_by alias "//" (other: DECIMAL): DECIMAL
+	divided_by alias "|/" (other: DECIMAL): DECIMAL
 			-- divides current by `other' and returns a new object
 			-- cannot divide by zer0, whereas `/' allows it
 		require

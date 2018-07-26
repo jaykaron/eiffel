@@ -70,7 +70,7 @@ feature -- tests
 			create d1.make_from_string_ctx ("22", d1c)
 			create d2.make_from_string_ctx ("7", d1c)
 			pi := pi100
-			rd := d1 // d2  -- proper division
+			rd := d1 |/ d2  -- proper division
 
 			Result := rd ~ pi
 			check Result end
@@ -84,7 +84,7 @@ feature -- tests
 			create d1.make_with_precision ("22", 100)
 			create d2.make_with_precision ("7", 100)
 			pi := pi100
-			r := d1 // d2  -- proper division
+			r := d1 |/ d2  -- proper division
 			Result := r ~ pi
 			check Result end
 		end
