@@ -5,7 +5,7 @@ note
 	revision: "$Revision$"
 
 class
-	JSO_TESTS
+	JSO_DECIMAL_TEST
 inherit
 	ES_TEST
 create

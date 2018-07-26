@@ -18,7 +18,7 @@ feature {NONE} -- Initialization
 	make
 			-- Run application.
 		do
-			add_test (create {JSO_TESTS}.make)
+			add_test (create {JSO_DECIMAL_TEST}.make)
 			add_test (create {DECIMAL_TEST1}.make)
 			add_test (create {DECIMAL_TEST2}.make)
 			add_test (create {SLOW_DECIMAL_TESTS}.make)
