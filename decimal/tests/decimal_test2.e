@@ -1,5 +1,5 @@
 class
-	TEST_DECIMAL_WRAPPER1
+	DECIMAL_TEST2
 inherit
 	ES_TEST
 

@@ -5,7 +5,7 @@ note
 	revision: "$Revision$"
 
 class
-	MA_DECIMAL_TESTS
+	DECIMAL_TEST1
 inherit
 	ES_TEST
 

@@ -18,10 +18,10 @@ feature {NONE} -- Initialization
 	make
 			-- Run application.
 		do
-			add_test (create {MA_DECIMAL_TESTS}.make)
-			add_test (create {SLOW_DECIMAL_TESTS}.make)
 			add_test (create {JSO_TESTS}.make)
-			add_test (create {TEST_DECIMAL_WRAPPER1}.make)
+			add_test (create {DECIMAL_TEST1}.make)
+			add_test (create {DECIMAL_TEST2}.make)
+			add_test (create {SLOW_DECIMAL_TESTS}.make)
 			show_browser
 			run_espec
 		end
