@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<system xmlns="http://www.eiffel.com/developers/xml/configuration-1-18-0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.eiffel.com/developers/xml/configuration-1-18-0 http://www.eiffel.com/developers/xml/configuration-1-18-0.xsd" name="decimal" uuid="FB44F480-6B75-42DC-B8F2-2738F8C3799E">
+	<target name="decimal">
+		<root class="ROOT" feature="make"/>
+		<file_rule>
+			<exclude>/CVS$</exclude>
+			<exclude>/EIFGENs$</exclude>
+			<exclude>/\.git$</exclude>
+			<exclude>/\.svn$</exclude>
+		</file_rule>
+		<option warning="true" manifest_array_type="mismatch_warning">
+			<assertions precondition="true" postcondition="true" check="true" invariant="true" loop="true" supplier_precondition="true"/>
+		</option>
+		<setting name="console_application" value="true"/>
+		<capability>
+			<concurrency support="scoop" use="scoop"/>
+			<void_safety support="all" use="all"/>
+		</capability>
+		<precompile name="base_pre" location="$ISE_PRECOMP\base-scoop-safe.ecf"/>
+		<library name="base" location="$ISE_LIBRARY\library\base\base.ecf">
+			<renaming old_name="SET" new_name="EIFFEL_SET"/>
+			<renaming old_name="BAG" new_name="EIFFEL_BAG"/>
+		</library>
+		<library name="espec" location="$ISE_LIBRARY\contrib\library\testing\framework\espec\library\espec.ecf"/>
+		<library name="gobo_math" location="$ISE_LIBRARY\library\gobo\gobo_math.ecf"/>
+		<library name="mathmodels" location="$MATHMODELS\library\mathmodels.ecf"/>
+		<library name="time" location="$ISE_LIBRARY\library\time\time.ecf"/>
+		<cluster name="model" location=".\model\" recursive="true"/>
+		<cluster name="root" location=".\root\" recursive="true"/>
+		<cluster name="tests" location=".\tests\" recursive="true"/>
+	</target>
+</system>
