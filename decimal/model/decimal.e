@@ -1,6 +1,6 @@
 note
 	description: "Summary description for {DECIMAL_WRAPPER}."
-	author: "chhina"
+	author: "JSO and DC"
 	date: "$Date$"
 	revision: "$Revision$"
 

@@ -1,6 +1,6 @@
 note
 	description: "A class for big rationals, using INT (big integers)."
-	author: "Amin Bandali"
+	author: "JSO and AB"
 	date: "$Date$"
 	revision: "$Revision$"
 
