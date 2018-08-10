@@ -1,5 +1,5 @@
 # ARRAY2 Extended
-Suggested by Larry Rix on eiffel-users group. ECF is eifiel18.07 Void safe. Manual AutoTest is used. 
+Suggested by Larry Rix on eiffel-users group. ECF is eiffel18.07 Void safe. Manual AutoTest is used. 
 
 ### Specfication
 
@@ -10,3 +10,5 @@ Add two new features to the class ARRAY2, to get  all the elements in one specif
 
 ### Design
 Use the open-closed principal. ARRAY2 is closed, but we can open it with inheritance. 
+
+![array2_ext](model/array2_ext.e)
