@@ -1,4 +1,4 @@
-note
+﻿note
 	description: "Summary description for {NAME}."
 	author: ""
 	date: "$Date$"
@@ -50,5 +50,10 @@ feature
 		do
 			Result := item.out
 		end
+
+invariant
+	item.count >= 1
+	65 <= item[1].code and item[1].code <= 90
+	-- item[1] ∈ A..Z
 
 end

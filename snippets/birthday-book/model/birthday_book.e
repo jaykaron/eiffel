@@ -30,6 +30,7 @@ feature {NONE, ES_TEST} -- implementation
 			-- create a birthday book
 		do
 			create imp.make (10)
+			imp.compare_objects
 		ensure
 			model.is_empty
 		end
@@ -67,7 +68,8 @@ feature
 			-- add birthday for `a_name' at date `d'
 			-- or overrride current birthday with new
 		do
-			if not model.domain.has (a_name) then
+--			if not model.domain.has (a_name) -- don't use model
+			if not imp.has_key (a_name) then
 				imp.extend (d, a_name)
 			else
 				imp.replace (d, a_name)
@@ -108,6 +110,11 @@ feature
 				end
 		end
 
+	count: INTEGER
+		do
+			Result := imp.count
+		end
+
 feature
 
 	out: STRING
@@ -116,7 +123,11 @@ feature
 		end
 
 invariant
+	count =  model.count
 	model.count = imp.count
-	across model as cursor all imp.has (cursor.item.first) and imp [cursor.item.first] ~ cursor.item.second end
+	across model as cursor all
+	   imp.has (cursor.item.first)
+	   and imp [cursor.item.first] ~ cursor.item.second
+	end
 
 end

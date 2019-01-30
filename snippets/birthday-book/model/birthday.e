@@ -17,7 +17,7 @@ convert
 feature {NONE} -- Initialization
 
 	make (a_month: INTEGER; a_day: INTEGER)
-			-- Initialization for `Current'.
+		require valid(a_day, a_month)
 		do
 			month := a_month
 			day := a_day
@@ -28,6 +28,7 @@ feature {NONE} -- Initialization
 			t.count = 2
 			attached {INTEGER} t.day
 			attached {INTEGER} t.month
+			valid(t.day,t.month)
 		do
 			make (t.month, t.day)
 		end
@@ -35,6 +36,13 @@ feature {NONE} -- Initialization
 feature
 	day: INTEGER
 	month: INTEGER
+
+	valid(a_day, a_month: INTEGER): BOOLEAN
+		do
+			Result :=
+			    (1 <= a_day and a_day <= 31)
+				and (1 <= a_month and a_month <= 12)
+		end
 
 	out: STRING
 		do
