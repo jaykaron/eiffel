@@ -68,7 +68,6 @@ feature
 			-- add birthday for `a_name' at date `d'
 			-- or overrride current birthday with new
 		do
---			if not model.domain.has (a_name) -- don't use model
 			if not imp.has_key (a_name) then
 				imp.extend (d, a_name)
 			else
