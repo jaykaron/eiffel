@@ -75,7 +75,7 @@ feature
 			end
 		ensure
 			model_override:
-				model ~ (old model @<+ [a_name, d])
+				model ~ (old model.deep_twin @<+ [a_name, d])
 		end
 
 	remind (d: BIRTHDAY): ARRAY [NAME]
@@ -107,6 +107,8 @@ feature
 				across (model @> (d)).domain as cr all
 					Result.has (cr.item)
 				end
+			model_unchanged:
+				model ~ old model.deep_twin
 		end
 
 	count: INTEGER
