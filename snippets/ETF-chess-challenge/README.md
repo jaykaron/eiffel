@@ -4,8 +4,17 @@ You are provided with simple ETF starter project (in folder `bishop-chess`) to i
 
 In job interviews with companies, students are often asked questions involving the movements of pieces such as kings, bishops or other game pieces. 
 
-In a Labtest we might provide you with a similar starter and ask you to design a game with any two pieces taken from kings, bishops, rooks, and knights. In the `docs` folder see `chess_moves.e`. See:
-`directions_of_player (player: CHARACTER): ARRAY[TUPLE[x: INTEGER; y: INTEGER]]`. The pieces move around on the board but do not remove each other. A piece cannot move into an occupied square. 
+In a Labtest, to keep it simple and time-limited, we might provide you with an ETF starter project like this one, and ask you to design a game with two different pieces taken from kings, bishops, rooks, and knights. In the `docs` folder see `chess_moves.e`. See:
+  
+`directions_of_player (player: CHARACTER): ARRAY[TUPLE[x: INTEGER; y: 
+  INTEGER]]`
+  
+The pieces move around on the board but do not "capture" each other but unlike normal chess they can jump over each other. A piece cannot move into an occupied square. 
+
+* The king moves exactly one square horizontally, vertically, or diagonally.
+*  A rook moves any number of vacant squares in a horizontal or vertical direction. 
+*  A bishop moves any number of vacant squares in any diagonal direction.
+*  A knight moves two squares horizontally then one square vertically, or moves one square horizontally then two squares vertically—i.e. in an "L" pattern.
 
 Please read and understand the design/code and ensure that you get it working. 
 
