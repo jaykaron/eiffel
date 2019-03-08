@@ -9,8 +9,9 @@ In a Labtest we might provide you with a similar starter and ask you to design a
 
 Please read and understand the design/code and ensure that you get it working. 
 
-
 Ensure that you understand how these pieces move. The abstract algorithm for any piece is in class MOVE. 
+
+In this exercise, the focus is on the undo/redo design patternn, not the contracts (although you may find the use of preconditions in the business logic useful in debugging your design). You stilld do defensive programming at the user interface (ETF_COMMAND), but messages are kept simple to keep the challenge limited. 
  
 ## Model Cluster
 
