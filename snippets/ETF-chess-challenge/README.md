@@ -47,7 +47,7 @@ You will need to edit at least the foillowing:
 * MOVE_KING
 * ETF_MOVE\_BISHOP
 
-Most of the infrastucture is provided, so that you can focus on the undo/redo design. 
+Most of the infrastucture is provided, so that you can focus on the undo/redo design. An Oracle is not provided as the rules are precisely specified. 
 
 ## What you must do
 
