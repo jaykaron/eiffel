@@ -13,14 +13,26 @@ The pieces move around on the board but do not "capture" each other but unlike n
 
 * The king moves exactly one square horizontally, vertically, or diagonally.
 *  A rook moves any number of vacant squares in a horizontal or vertical direction. 
-*  A bishop moves any number of vacant squares in any diagonal direction.
 *  A knight moves two squares horizontally then one square vertically, or moves one square horizontally then two squares vertically—i.e. in an "L" pattern.
+*  A bishop moves any number of vacant squares in any diagonal direction.
+
+![Moves of Bishop](docs/bishop.png)
 
 Please read and understand the design/code and ensure that you get it working. 
 
 Ensure that you understand how these pieces move. The abstract algorithm for any piece is in class MOVE. 
 
-In this exercise, the focus is on the undo/redo design patternn, not the contracts (although you may find the use of preconditions in the business logic useful in debugging your design). You stilld do defensive programming at the user interface (ETF_COMMAND), but messages are kept simple to keep the challenge limited. 
+## Undo/redo design pattern
+
+In this exercise, the focus is on the undo/redo design patternn, not the contracts (although you may find the use of preconditions in the business logic useful in debugging of your design). You do defensive programming at the user interface (ETF_COMMAND) due to the need for tolerant preconditions, but messages are kept simple to keep the challenge limited. In the buisiness logic, the preconditions are stronger to ensure the safety of the game with respect to the rules of chess moves, and thus there is much less need for defensive programming. 
+
+he redo/undo design pattern is discussed in OOSC2 chapter 21, with the following goals:
+
+ * The mechanism should be applicable to a wide class of interactive applications, regardless of the application domain.
+ * The mechanism should not require redesign for each new input command.
+ * It should make reasonable use of storage.
+ * It should be applicable to arbitrary-levels of undo/redo.
+
  
 ## Model Cluster
 
