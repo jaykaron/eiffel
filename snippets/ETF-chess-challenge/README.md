@@ -5,7 +5,7 @@ You are provided with simple ETF starter project (in folder `bishop-chess`) to i
 In job interviews with companies, students are often asked questions involving the movements of pieces such as kings, bishops or other game pieces. 
 
 In a Labtest we might provide you with a similar starter and ask you to design a game with any two pieces taken from kings, bishops, rooks, and knights. In the `docs` folder see `chess_moves.e`. See:
-`directions_of_player (player: CHARACTER): ARRAY[TUPLE[x: INTEGER; y: INTEGER]]`.
+`directions_of_player (player: CHARACTER): ARRAY[TUPLE[x: INTEGER; y: INTEGER]]`. The pieces move around on the board but do not remove each other. A piece cannot move into an occupied square. 
 
 Please read and understand the design/code and ensure that you get it working. 
 
