@@ -7,14 +7,16 @@ In job interviews with companies, students are often asked questions involving t
 In a Labtest we might provide you with a similar starter and ask you to design a game with any two pieces taken from kings, bishops, rooks, and knights. In the `docs` folder see `chess_moves.e`. See:
 `directions_of_player (player: CHARACTER): ARRAY[TUPLE[x: INTEGER; y: INTEGER]]`.
 
+Please read and understand the design/code and ensure that you get it working. 
+
 
 Ensure that you understand how these pieces move. The abstract algorithm for any piece is in class MOVE. 
  
 ## Model Cluster
 
-[Model Cluster](docs/model-cluster.png)
+![Model Cluster](docs/model-cluster.png)
 
-The king moves on the board but not the bishop. The deferred class MOVE* has a template pattern for moving different pieces on the board and also specifies deferred routines for undo and redo. Different pieces effect `directions` differently, to make use of polymorphism and dynamic binding. 
+In the starter project, the king moves on the board but not the bishop to give you some idea of the basic design. The deferred class MOVE* has a template pattern for moving different pieces on the board and also specifies deferred routines for undo and redo. Different pieces effect `directions` differently, to make use of polymorphism and dynamic binding. 
 
 You will need to edit at least the foillowing:
 
