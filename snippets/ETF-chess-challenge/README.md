@@ -34,7 +34,7 @@ The redo/undo design pattern is discussed in OOSC2 chapter 21, with the followin
  * It should be applicable to arbitrary-levels of undo/redo.
 
  
-## Model Cluster
+## Design of the Model Cluster
 
 ![Model Cluster](docs/model-cluster.png)
 
