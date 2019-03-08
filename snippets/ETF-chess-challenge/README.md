@@ -26,7 +26,7 @@ Ensure that you understand how these pieces move. The abstract algorithm for any
 
 In this exercise, the focus is on the undo/redo design patternn, not the contracts (although you may find the use of preconditions in the business logic useful in debugging of your design). You do defensive programming at the user interface (ETF_COMMAND) due to the need for tolerant preconditions, but messages are kept simple to keep the challenge limited. In the buisiness logic, the preconditions are stronger to ensure the safety of the game with respect to the rules of chess moves, and thus there is much less need for defensive programming. 
 
-he redo/undo design pattern is discussed in OOSC2 chapter 21, with the following goals:
+The redo/undo design pattern is discussed in OOSC2 chapter 21, with the following goals:
 
  * The mechanism should be applicable to a wide class of interactive applications, regardless of the application domain.
  * The mechanism should not require redesign for each new input command.
