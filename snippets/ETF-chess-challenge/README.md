@@ -53,6 +53,8 @@ Most of the infrastucture is provided, so that you can focus on the undo/redo de
 
 Start by getting the acceptance test below working. Then write you own syntactically correct acceptance tests and ensure that the project (a) compiles and (b) is correct in all respects and (c) never crashes with exceptions, or non-termination. 
 
+**Hint**: You may wish to use the IDE to automaticall generate the BON class diagram (or UML if you prefer). This diagram will assist you in underatnding the architecture of the syste,
+
 ## The abtract grammar at the user interface
 
 ```
