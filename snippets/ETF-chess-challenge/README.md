@@ -30,7 +30,7 @@ The redo/undo design pattern is discussed in OOSC2 chapter 21, with the followin
 
  * The mechanism should be applicable to a wide class of interactive applications, regardless of the application domain.
  * The mechanism should not require redesign for each new input command.
- * It should make reasonable use of storage.
+ * **It should make reasonable use of storage**. (E.g. in this example, you must not store in the history of moves the whole board with all the pieces, just sufficent information to redo or undo the move. Note that in this example the history is unbounded and thus efficent storage is important). 
  * It should be applicable to arbitrary-levels of undo/redo.
 
  
