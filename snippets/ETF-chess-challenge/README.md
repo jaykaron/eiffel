@@ -1,6 +1,6 @@
 # Chess challenge (undo/redo design pattern)
 
-You are provdied with simple ETF starter project (in folder `bishop-chess`) to illustrate the undo/redo design pattern for a chess board with only two pieces, a king (K) and a bishop (B). The project should compile out of the box but is incomplete. The undo/redo design pattern is built on top of basic OO constructs such as static typing, dynamic binding and polymorphism. 
+You are provided with simple ETF starter project (in folder `bishop-chess`) to illustrate the undo/redo design pattern for a chess board with only two pieces, a king (K) and a bishop (B). The project should compile out of the box but is incomplete. The undo/redo design pattern is built on top of basic OO constructs such as static typing, dynamic binding and polymorphism. 
 
 In job interviews with companies, students are often asked questions involving the movements of pieces such as kings, bishops or other game pieces. 
 
