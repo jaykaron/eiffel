@@ -141,6 +141,20 @@ feature -- parsing
 					 Result := dummy_cmd 
 				 end 
 
+			elseif cmd_name ~ "move_rook" then 
+				 if (attached {ETF_TUPLE_ARG} args[1] as square) and then square.value.count = 2 and then (attached {ETF_INT_ARG} square.value[1] as square_x) and then (attached {ETF_INT_ARG} square.value[2] as square_y) and then 1 <= square_x.value and then square_x.value <= 8 and then 1 <= square_y.value and then square_y.value <= 8 then 
+					 create {ETF_MOVE_ROOK} Result.make ("move_rook", [[square_x.value, square_y.value]], abstract_ui) 
+				 else 
+					 Result := dummy_cmd 
+				 end 
+
+			elseif cmd_name ~ "move_knight" then 
+				 if (attached {ETF_TUPLE_ARG} args[1] as square) and then square.value.count = 2 and then (attached {ETF_INT_ARG} square.value[1] as square_x) and then (attached {ETF_INT_ARG} square.value[2] as square_y) and then 1 <= square_x.value and then square_x.value <= 8 and then 1 <= square_y.value and then square_y.value <= 8 then 
+					 create {ETF_MOVE_KNIGHT} Result.make ("move_knight", [[square_x.value, square_y.value]], abstract_ui) 
+				 else 
+					 Result := dummy_cmd 
+				 end 
+
 			elseif cmd_name ~ "undo" then 
 				 if TRUE then 
 					 create {ETF_UNDO} Result.make ("undo", [], abstract_ui) 
@@ -206,6 +220,24 @@ feature -- parsing
 					end
 					Result.append (evt_out_str + " does not conform to declaration " +
 							"move_bishop(square: SQUARE = TUPLE[x: 1 .. 8; y: 1 .. 8])")
+				end
+
+			elseif cmd_name ~ "move_rook" then 
+				if NOT( ( args.count = 1 ) AND THEN (attached {ETF_TUPLE_ARG} args[1] as square) and then square.value.count = 2 and then (attached {ETF_INT_ARG} square.value[1] as square_x) and then (attached {ETF_INT_ARG} square.value[2] as square_y) and then 1 <= square_x.value and then square_x.value <= 8 and then 1 <= square_y.value and then square_y.value <= 8) then 
+					if NOT Result.is_empty then
+						Result.append ("%N")
+					end
+					Result.append (evt_out_str + " does not conform to declaration " +
+							"move_rook(square: SQUARE = TUPLE[x: 1 .. 8; y: 1 .. 8])")
+				end
+
+			elseif cmd_name ~ "move_knight" then 
+				if NOT( ( args.count = 1 ) AND THEN (attached {ETF_TUPLE_ARG} args[1] as square) and then square.value.count = 2 and then (attached {ETF_INT_ARG} square.value[1] as square_x) and then (attached {ETF_INT_ARG} square.value[2] as square_y) and then 1 <= square_x.value and then square_x.value <= 8 and then 1 <= square_y.value and then square_y.value <= 8) then 
+					if NOT Result.is_empty then
+						Result.append ("%N")
+					end
+					Result.append (evt_out_str + " does not conform to declaration " +
+							"move_knight(square: SQUARE = TUPLE[x: 1 .. 8; y: 1 .. 8])")
 				end
 
 			elseif cmd_name ~ "undo" then 

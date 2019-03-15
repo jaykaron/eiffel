@@ -21,6 +21,10 @@ play(size: SIZE)
    -- either due to board size
    -- or because a square is occupied
 
+move_rook(square: SQUARE)
+
+move_knight(square: SQUARE)
+
  undo
 
  redo

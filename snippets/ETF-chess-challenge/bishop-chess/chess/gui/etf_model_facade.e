@@ -90,6 +90,12 @@ feature -- Constructor
   move_bishop(
       square: SQUARE = TUPLE[x: 1 .. 8; y: 1 .. 8]
   )
+  move_rook(
+      square: SQUARE = TUPLE[x: 1 .. 8; y: 1 .. 8]
+  )
+  move_knight(
+      square: SQUARE = TUPLE[x: 1 .. 8; y: 1 .. 8]
+  )
   undo
   redo
 ]"
